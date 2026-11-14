@@ -2,10 +2,10 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" delimiter-precedes-last="always" demote-non-dropping-particle="sort-only" initialize-with="" initialize-with-hyphen="false" name-as-sort-order="all" name-delimiter=", " page-range-format="expanded" sort-separator=" " version="1.0" default-locale="en-US">
   <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
-    <title>Japanese Journal of Neurosurgery</title>
+    <title>Japanese Journal of Neurosurgery (Author Year No DOI v2)</title>
     <title-short>Alphabetical bibliography with superscript numeric citations</title-short>
-    <id>http://www.zotero.org/styles/japanese-journal-of-neurosurgery</id>
-    <link href="http://www.zotero.org/styles/japanese-journal-of-neurosurgery" rel="self"/>
+    <id>http://www.zotero.org/styles/japanese-journal-of-neurosurgery-author-year-no-doi-v2</id>
+    <link href="http://www.zotero.org/styles/japanese-journal-of-neurosurgery-author-year-no-doi-v2" rel="self"/>
     <link href="http://www.zotero.org/styles/american-medical-association-10th-edition" rel="template"/>
     <author>
       <name>Julian Onions</name>
@@ -30,7 +30,7 @@
     <category citation-format="numeric"/>
     <category field="medicine"/>
     <summary>Japanese Journal of Neurosurgery: alphabetical bibliography, all authors, superscript numbered citations.</summary>
-    <updated>2026-11-14T03:19:50+00:00</updated>
+    <updated>2026-11-14T04:00:00+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -45,64 +45,6 @@
       </term>
     </terms>
   </locale>
-  <macro name="label-chapter-number">
-    <group delimiter=" ">
-      <choose>
-        <if is-numeric="chapter-number">
-          <label form="short" strip-periods="true" variable="chapter-number"/>
-        </if>
-      </choose>
-      <text variable="chapter-number"/>
-    </group>
-  </macro>
-  <macro name="label-edition">
-    <group delimiter=" ">
-      <choose>
-        <if is-numeric="edition">
-          <number form="ordinal" variable="edition"/>
-          <label form="short" variable="edition"/>
-        </if>
-        <else>
-          <text variable="edition"/>
-        </else>
-      </choose>
-    </group>
-  </macro>
-  <macro name="label-supplement-number">
-    <group delimiter=" ">
-      <choose>
-        <if is-numeric="supplement-number">
-          <text form="short" strip-periods="true" term="supplement"/>
-        </if>
-      </choose>
-      <text variable="supplement-number"/>
-    </group>
-  </macro>
-  <macro name="label-volume">
-    <group delimiter=" ">
-      <choose>
-        <if is-numeric="volume">
-          <label form="short" strip-periods="true" text-case="capitalize-first" variable="volume"/>
-        </if>
-      </choose>
-      <text variable="volume"/>
-    </group>
-  </macro>
-  <macro name="editor">
-    <names variable="editor">
-      <label form="short" prefix=", "/>
-    </names>
-  </macro>
   <macro name="first-author-sort"><names variable="author"><name form="long" et-al-min="2" et-al-use-first="1" name-as-sort-order="all"/></names></macro><macro name="author">
     <names variable="author"><name delimiter=", " and="text" initialize-with="" name-as-sort-order="all" sort-separator=" "/><substitute><names variable="editor"/></substitute></names></macro>
-  <macro name="title">
-    <choose>
-      <if match="any" type="bill book graphic legal_case legislation motion_picture report song thesis">
-        <text font-style="italic" text-case="title" variable="title"/>
-      </if>
-      <else>
-        <text variable="title"/>
-      </else>
-    </choose>
-  </macro>
   <citation collapse="citation-number"><layout delimiter="," vertical-align="sup"><text variable="citation-number"/></layout></citation><bibliography second-field-align="flush"><sort><key macro="first-author-sort" sort="ascending"/><key variable="issued" sort="ascending"/><key variable="author" sort="ascending"/></sort><layout><text variable="citation-number" suffix="）"/><group><text macro="author" suffix="："/><text variable="title" suffix="．"/><choose><if type="article-journal"><group><text variable="container-title" form="short" suffix=" "/><text variable="volume"/><text variable="page" prefix="："/><date variable="issued" prefix="，" suffix="．" date-parts="year" form="numeric"/></group></if><else-if type="book"><group delimiter="，"><text variable="publisher-place"/><text variable="publisher"/><date variable="issued" date-parts="year" form="numeric"/></group><text value="．"/></else-if><else-if type="chapter"><group><text value="in "/><names variable="editor" suffix="："/><text variable="container-title" suffix="．"/><group delimiter="，"><text variable="publisher-place"/><text variable="publisher"/><date variable="issued" date-parts="year" form="numeric"/></group><text variable="page" prefix="，pp." suffix="．"/></group></else-if><else><text variable="container-title" suffix=" "/><text variable="volume"/><text variable="page" prefix="："/><date variable="issued" prefix="，" suffix="．" date-parts="year" form="numeric"/></else></choose></group></layout></bibliography></style>
