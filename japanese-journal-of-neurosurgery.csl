@@ -31,7 +31,7 @@
     <category citation-format="numeric"/>
     <category field="medicine"/>
     <summary>AMA Manual of Style: A Guide for Authors and Editors (11th ed.)</summary>
-    <updated>2026-11-14T02:31:02+00:00</updated>
+    <updated>2026-11-14T03:19:50+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -142,6 +142,10 @@
     </layout>
   </citation>
   <bibliography second-field-align="flush">
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
     <layout>
       <text variable="citation-number" suffix=")"/>
       <group delimiter=". ">
@@ -293,3 +297,4 @@
     </layout>
   </bibliography>
 </style>
+
